@@ -1,0 +1,24 @@
+.Delivery-info{
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+	margin: 0px 0px 15px 0px;
+}
+.text-1 {
+	color: #000;
+	font-family: 'Inter';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.text-2 {
+	color: #808080;
+	font-family: 'Inter';
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: capitalize;
+}
