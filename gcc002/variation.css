@@ -1,0 +1,21 @@
+.all-item{
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	justify-content: center;
+	margin-top: 12px;
+	padding: 0px 16px 0px 16px;
+}
+.each-item{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.gcc002-title{
+	color:  #000;
+	font-family: Inter;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px;
+}
