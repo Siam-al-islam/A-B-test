@@ -7,6 +7,6 @@ const truckIcon = `<svg xmlns="http://www.w3.org/2000/svg " width="24" height="2
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41179 4.9412H14.8236V13.0588C14.8236 13.4487 15.1396 13.7647 15.5295 13.7647C15.9193 13.7647 16.2354 13.4487 16.2354 13.0588V4.23531C16.2354 3.84545 15.9193 3.52942 15.5295 3.52942H0.705945C0.316086 3.52942 5.53131e-05 3.84545 5.53131e-05 4.23531V13.4118C5.53131e-05 13.8017 0.316086 14.1177 0.705945 14.1177C1.0958 14.1177 1.41183 13.8017 1.41183 13.4118L1.41179 4.9412Z" fill="black"/>
 </svg>`;
 
-const htmlStr = `<div class="Delivery-info">${truckIcon} <span class="text-1">1-3 Day Delivery</span> <span class="text-2"> (Tuesday, January 4th To New York)</span></div>`
+const htmlStr = `<div class="delivery-detail">${truckIcon} <span class="delivery-time">1-3 Day Delivery</span> <span class="possible-delivery-date"> (Tuesday, January 4th To New York)</span></div>`
 
 anchorPoint.insertAdjacentHTML('afterend', htmlStr);
