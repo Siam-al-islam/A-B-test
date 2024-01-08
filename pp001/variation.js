@@ -5,4 +5,4 @@ const htmlStr = `
 		</span>
 	</div>`
 
-anchorPoint.insertAdjacentHTML('afterend', htmlStr)
+anchorPoint.insertAdjacentHTML('afterend', htmlStr);
