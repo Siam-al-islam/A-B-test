@@ -1,0 +1,19 @@
+.estimated-delivery-date {
+	margin: 12px 0px 0px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.estimated-date{
+	font-family: Inter;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.4000000059604645px;
+}
+.estimated_time{
+	color: #006B14;
+	font-family: Inter;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.4000000059604645px;
+}
