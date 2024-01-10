@@ -1,0 +1,18 @@
+.ProductForm__AddToCart:before {
+	background-color: #F2E6DF !important;
+	border: 1px solid #000000;
+}
+.ProductForm__AddToCart{
+	gap: 8px;
+}
+.ProductForm__AddToCart span{
+	color: black !important;
+}
+.atc-svg{
+	width: 24px;
+	height: 24px;
+	border: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
