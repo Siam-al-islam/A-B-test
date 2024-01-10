@@ -1,7 +1,9 @@
 const anchorPoint= document.querySelector('.ProductForm__AddToCart');
 const htmlStr= `
 <span class= "atc-svg">
-	<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0c6.347 0 11.5 5.153 11.5 11.5s-5.153 11.5-11.5 11.5-11.5-5.153-11.5-11.5 5.153-11.5 11.5-11.5zm0 1c5.795 0 10.5 4.705 10.5 10.5s-4.705 10.5-10.5 10.5-10.5-4.705-10.5-10.5 4.705-10.5 10.5-10.5zm.5 10h6v1h-6v6h-1v-6h-6v-1h6v-6h1v6z"/>
+	<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+	<path d="M11.7296 16.4718V8.97182H13.0024V16.4718H11.7296ZM8.61599 13.3582V12.0855H16.116V13.3582H8.61599Z" fill="black"></path>
+	<circle cx="12.3667" cy="12.8542" r="11.5" stroke="black"></circle>
 	</svg>
 </span>`
 
