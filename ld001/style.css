@@ -1,102 +1,80 @@
-(function pollFor() {
+.hide {
+    display: none;
+}
 
-    const init = () => {
-        let userData = {};
-        const anchorPoint = document.querySelector(".feed-follows-module");
-        anchorPoint.classList.add("hide");
+.form-container {
+    padding: 20px;
+}
 
-        const htmlStr =
-            `<div class="form-container">
-		    	<div class='header-wrapper'>
-		    		<span class='header-text'>Multi-Step Form</span>
-		    		<span class='header-count' data-count="1">
-		    		1
-		    		</span>
-		    	</div>
-		    	
-		        <div class="input-container">
-		            <input class="input-field" type="text" data-firstName placeholder="First Name">
-		            <input class="input-field" type="text" data-lastName placeholder="Last Name">
-		            <input class="input-field" type="email" data-email placeholder="Email">
-		        </div>
-		        <div class="next-btn-wrapper">
-		            <button class="next-btn">Next</button>
-		        </div>
-		    </div>`
+.header-wrapper {
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
 
-        anchorPoint.insertAdjacentHTML('beforebegin', htmlStr);
+.header-text {
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	background: linear-gradient(45deg, #6feeff, #0065bb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
-        //dry: don't repeat yourself...........
-        const counter = () => {
-            const headerCountElem = document.querySelector(".header-count");
+.header-count {
+	height: 30px;
+	width: 30px;
+	color: #fff;
+	text-align: center;
+	border: 2px solid #fff;
+	border-radius: 50px;
+	background: linear-gradient(272deg, #839a9e, #0065bb);
+}
 
-            const dataCount = Number(headerCountElem.dataset.count); // 1
-            const domCountValue = Number(headerCountElem.textContent); // 1
+.input-container {
+    display: grid;
+    gap: 20px;
+}
 
-            const totalCount = dataCount + domCountValue; // 1 + 1 = 2
+input.input-field {
+    border: 1px solid #191d20c3;
+    border-radius: 35px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
 
-            return totalCount; // 2
-        }
+.next-btn-wrapper {
+	margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px 10px 0px;
+}
 
-        const getInputData = () => {
-            const allInputdata = document.querySelectorAll(".input-field");
-            allInputdata.forEach((eachInputElem) => {
-                eachInputElem.addEventListener('input', (e) => {
-                    eachInputElem.value = e.target.value;
-                    const inputLength = e.target.value.length;
-                    const inputField = e.target;
+.next-btn {
+    color: #65A0DC;
+    background-color: #1B1F23;
+    border: 2px solid #65A0DC;
+    border-radius: 35px;
+    padding: 10px 20px;
+    width: 100%;
+}
 
-                    if(inputLength < 4){
-                        inputField.classList.add("error");
-                        if(document.querySelector(".error-text")) return;
-                        inputField.insertAdjacentHTML("afterend", `<span class="error-text">First name at least 4 characters</span>`)
-                    }
-                    else{
-                        inputField.classList.remove("error")
-                        document.querySelector(".error-text").style.display="none";
-                    }
-                })
-            })
-        }
+.next-btn:hover {
+	background: linear-gradient(272deg, #839a9e, #0065bb);
+	color: #fff;
+	border: 2px solid #fff;
+}
 
-        getInputData();
+.error {
+	box-shadow: none !important;
+	border: 2px solid rgb(230, 54, 54) !important;
+}
 
-        const checkLength = (inputElem) => {
-            if (inputElem.value.length > 0) {
-                return true;
-            }
-            return false;
-        }
-
-        const nextBtnHandler = () => {
-            const nextBtn = document.querySelector(".next-btn");
-            nextBtn.addEventListener('click', () => {
-                const firstName = document.querySelector("[data-firstName]");
-                const lastName = document.querySelector("[data-lastName]");
-                const email = document.querySelector("[data-email]");
-                
-                const isEnabled = checkLength(firstName) && checkLength(lastName) && checkLength(email);
-
-                if (!isEnabled) return;
-
-                const countValue = counter();
-                document.querySelector(".header-count").textContent = countValue;
-
-                userData = {
-                    ...userData,
-                    firstName: firstName.value,
-                    lastName: lastName.value,
-                    email: email.value
-                };
-                console.log("userData:", userData)
-            })
-        }
-        nextBtnHandler();
-    }
-
-    if (document.querySelector(".feed-follows-module")) {
-        init();
-    } else {
-        setTimeout(pollFor, 25);
-    }
-})();
+.error:focus {
+	box-shadow: none !important;
+	outline: none !important;
+}
